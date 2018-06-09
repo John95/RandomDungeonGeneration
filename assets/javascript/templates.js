@@ -1,7 +1,7 @@
 //Retrieve the template data from the HTML .
 var template = $('#handlebars-demo').html();
 
-var context = { "name" : "Ritesh Kumar", "occupation" : "developer" };
+var context = { "name" : "John Carroll", "occupation" : "developer" };
 
 //Compile the template data into a function
 var templateScript = Handlebars.compile(template);

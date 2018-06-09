@@ -14,26 +14,39 @@
         integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
         crossorigin="anonymous">
     </script>
+    <!-- this is just a test script -->
+    <script>
+        $(document).ready(function(){
+            $("p").click(function(){
+                $(this).hide();
+            });
+        });
+    </script>
+
 </head>
 <body>
     <div class="container">
         <div class="row">
-            <div class="col l2"></div>
-            <div class="col l8">
+            <div class="col l2 "></div>
+            <div class="col l8 s12">
                 <div class="card">
-                    <span class="card-title">Choose Starting Room</span>
-                    <p>1, 2, 3, 4, or 5</p>
-                    {{title}}
+                    <span class="card-title">Materialize Works!</span>
+                    <p>If there is a card surrounding this paragraph and title,
+                        that means Materialize is doing its job!
+                    </p>
                 </div>
 
                 <div class="card">
                     <script id="handlebars-demo" type="text/x-handlebars-template">
                         <div>
-                            My name is {{name}}. I am a {{occupation}}.	
+                            My name is {{name}}. I am a {{occupation}}.
+                            Handlebars works!
                         </div>
                     </script>
                 </div>
             </div>
+
+            <p>If you click this, and it disappears, jQuery works!</p>
         </div>
     </div>
     
