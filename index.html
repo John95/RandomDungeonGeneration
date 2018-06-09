@@ -7,9 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/materialize.min.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/main.css" />
-    <script src="assets/javascript/main.js"></script>
     <script src="assets/javascript/materialize.min.js"></script>
     <script src="assets/javascript/handlebars-v4.0.11.js"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+        crossorigin="anonymous">
+    </script>
 </head>
 <body>
     <div class="container">
@@ -19,15 +23,21 @@
                 <div class="card">
                     <span class="card-title">Choose Starting Room</span>
                     <p>1, 2, 3, 4, or 5</p>
+                    {{title}}
+                </div>
+
+                <div class="card">
+                    <script id="handlebars-demo" type="text/x-handlebars-template">
+                        <div>
+                            My name is {{name}}. I am a {{occupation}}.	
+                        </div>
+                    </script>
                 </div>
             </div>
         </div>
     </div>
     
-    <script
-        src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
-        crossorigin="anonymous">
-    </script>
+    <!-- scripts that respond to template engine -->
+    <script src="assets/javascript/templates.js"></script>
 </body>
 </html>
