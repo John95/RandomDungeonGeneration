@@ -1,0 +1,50 @@
+This file should be called, "How to make this program" instead of "how to use this program".
+
+How to use the table:
+Begin by picking a starting room. Then pick a door and roll on Table II to see if you get a passage or a room.
+
+Passage Rules:
+Roll on Table III to see how wide it is. Roll on Table I to see where the passage ends up in a certain direction.
+
+Room Rules:
+In every room, roll on Table V. to find Shape and Size, roll on Table V.C. to find number of exit. Then roll on Table V.F. to find contents. If treasure is in the room, roll on Table V.G. to see what it is.
+
+-------------------------------------------------------------------
+
+What this means in user experience terms is:
+You click on "Door" button, it chooses either Passage or Room/Chamber (50/50 chance).
+
+Whatever it chooses, it executes those rules and conveys the information in a readable format.
+
+UI options:
+"Beyond Door"
+"Generate Room"
+"Generate Passage"
+
+Beyond Door Rules: 
+It says there's either a Passage or a Room on the other side then generates the Passage or Room.
+
+Passage Rules:
+Separate Card for Passage Width unconnected to sub-passage generation.
+
+XX
+A sub-passage is generated. The following information is determined for the sub-passage.
+- Side Passage? (T/F)
+- Turns? (T/F)
+- Ends? (T/F) [if so, there's a 6/8 chance it's a Room. 1/8 it's a dead end. 1/8 chance it's a stairway.] (In the program this will not be represented by a boolean)
+- Trap? (T/F)
+- Monster? (T/F)
+XX
+
+Note: only one of these booleans should be true at a time. If none are, then the passage continues for 60 more feet.
+
+"Continue Down Passage" button appears. The information between the XX's is repeated if button is pressed.
+
+Room Rules:
+Information that is saved.
+- Size/Shape
+- # of Exits
+- Empty? (T/F) (3/5 chance)
+- Treasure? (T/F) (1/5 chance)
+- Monster? (T/F) (3/10 chance)
+- Trap? (T/F)
